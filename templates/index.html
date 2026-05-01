@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar & Spell Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Grammar & Spell Checker</h2>
+    <form method="POST">
+        <textarea name="input_text" placeholder="Enter sentence with mistakes..." required></textarea>
+        <button type="submit">Check</button>
+    </form>
+    <h3>Corrected Sentence:</h3>
+    <p>{{ corrected_text }}</p>
+</body>
+</html>
